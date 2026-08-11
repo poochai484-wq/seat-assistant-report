@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>坐席助手能力评估报告</title>
+<style>
+  :root { --primary: #1a73e8; --green: #0d9488; --orange: #ea580c; --red: #dc2626; --gray: #64748b; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.7; }
+  .container { max-width: 900px; margin: 0 auto; padding: 40px 32px 60px; }
+  h1 { font-size: 28px; color: var(--primary); margin-bottom: 8px; }
+  .meta { color: var(--gray); font-size: 14px; margin-bottom: 32px; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px; }
+  h2 { font-size: 20px; color: #334155; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+  h3 { font-size: 16px; color: #475569; margin: 24px 0 12px; padding-left: 12px; border-left: 3px solid var(--primary); }
+  h4 { font-size: 14px; color: #475569; margin: 16px 0 8px; }
+  p { font-size: 14px; margin: 8px 0; }
+  blockquote { background: #e8f0fe; border-left: 4px solid var(--primary); padding: 12px 16px; margin: 12px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: #1e40af; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  th { background: #f1f5f9; font-size: 13px; font-weight: 600; color: #475569; text-align: left; padding: 10px 14px; }
+  td { font-size: 13px; padding: 10px 14px; border-top: 1px solid #f1f5f9; }
+  tr:hover td { background: #f8fafc; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 8px; font-weight: 500; }
+  .tag.done { background: #dcfce7; color: #166534; }
+  .tag.wip { background: #fef3c7; color: #92400e; }
+  .tag.p0 { background: #fee2e2; color: #991b1b; }
+  ul, ol { padding-left: 20px; font-size: 14px; margin: 8px 0; }
+  li { margin: 4px 0; }
+  strong { color: #1e293b; }
+  .highlight { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px 16px; margin: 12px 0; border-radius: 0 8px 8px 0; font-size: 14px; }
+  .warn { background: #fee2e2; border-left: 4px solid var(--red); padding: 12px 16px; margin: 12px 0; border-radius: 0 8px 8px 0; font-size: 14px; color: #991b1b; }
+  img { max-width: 100%; border-radius: 8px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .img-caption { text-align: center; font-size: 12px; color: var(--gray); margin-top: -8px; margin-bottom: 16px; }
+  hr { border: none; border-top: 1px solid #e2e8f0; margin: 24px 0; }
+  @media print { body { background: white; } .container { padding: 20px; } table { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>坐席助手能力评估报告</h1>
+<div class="meta">
+  报告周期：2026年4月—7月（数据截至7月21日，并发数据截至7月28日）<br>
+  报告目的：对齐管理层、使用方、质检方对坐席助手能力与边界的认知<br>
+  报告方：客服中心系统规划组
+</div>
+
+<hr>
+
+<h2>一、坐席助手是什么</h2>
+<p>坐席助手是在线客服系统中的 AI 辅助工具。核心定位是：</p>
+<blockquote><strong>帮助客服更高效地完成打字和流程操作。</strong></blockquote>
+<p>助手提供两种工作模式：</p>
+<table>
+  <tr><th>模式</th><th>说明</th><th>适用条件</th></tr>
+  <tr><td><strong>自动回复</strong></td><td>助手直接向用户发送消息，无需客服点击</td><td>场景准确率 ≥ 95%</td></tr>
+  <tr><td><strong>建议回复</strong></td><td>助手生成参考话术，由客服判断后自行选择发送</td><td>已覆盖但准确率未达自动回复标准</td></tr>
+</table>
+<blockquote><strong>责任原则：客服是所有对话的第一责任人，助手是辅助工具。</strong> 助手自动回复时，客服仍需关注对话质量，在需要时及时介入。</blockquote>
+
+<hr>
+
+<h2>二、能力全景</h2>
+
+<h3>2.1 能力矩阵总览</h3>
+<img src="能力矩阵图.png" alt="能力矩阵图">
+<p class="img-caption">坐席助手覆盖三大功能模块，从历史总结到客诉处理到服务用语。绿色为已支持，红色虚框为暂不支持、需人工处理。</p>
+
+<h3>2.2 历史总结</h3>
+<ul>
+  <li><strong>近30天工单总结</strong>：按工单状态与账号维度去重汇总，生成问题概述及处理摘要</li>
+  <li><strong>本次智能客服总结</strong>：基于本次智能在线对话进行智能分析，提炼用户问题线索</li>
+  <li>在线工作台中，助手在欢迎语后自动发送确认话术，询问用户是否继续咨询此前问题</li>
+</ul>
+
+<h3>2.3 客诉处理</h3>
+<p>覆盖退费场景的完整链路：退费意图识别 → 初次挽留 → 账号确认 → 订单确认 → 资源挽留 → 可退则退/不可退则升级。</p>
+<ul>
+  <li>支持常规会员订单（含基础/黄金/白金/星钻/亲情卡/芝麻GO等）及加更礼订单</li>
+  <li>当前账号近1年内订单确认、退费条件判定、资源挽留方案（单笔差异化赠送、多笔最优赠送）</li>
+  <li>高/中/低风险等级的二线回复时效方案</li>
+  <li><strong>暂不支持</strong>：单点影片、云影院、奇豆奇点、知识付费等订单类型，以及其他业务的客诉场景</li>
+</ul>
+
+<h3>2.4 服务用语</h3>
+<p>针对「用户致歉」「用户致谢」「用户投诉」「用户负向情绪」四类场景，系统通过关键词匹配自动识别用户意图并回复对应服务用语。</p>
+
+<h3>2.5 能力准入/退出机制</h3>
+<p>每个场景的自动回复资格以<strong>对话通过率 ≥ 95%</strong> 为核心依据。不达标的场景收回自动回复，降级为建议模式；持续监控、动态调整。</p>
+
+<hr>
+
+<h2>三、效能数据</h2>
+
+<h3>3.1 人效：使用助手的坐席日均多处理 15-41%</h3>
+<table>
+  <tr><th>月份</th><th>试点（通/天）</th><th>非试点（通/天）</th><th>部门均值</th><th>试点 vs 非试点</th></tr>
+  <tr><td>5月</td><td>141</td><td>100</td><td>109</td><td><strong>+41.0%</strong></td></tr>
+  <tr><td>6月</td><td>141</td><td>118</td><td>127</td><td><strong>+19.2%</strong></td></tr>
+  <tr><td>7月</td><td>148</td><td>128</td><td>135</td><td><strong>+15.6%</strong></td></tr>
+</table>
+<div class="highlight">提升幅度在收窄，但试点人效并未下降（从141升至148）。是非试点也在提升（100→118→128），可能存在工具或流程的溢出效应。</div>
+
+<h3>3.2 并发负荷：助手使坐席在更高并发下维持稳定</h3>
+<blockquote>试点坐席（使用助手）系统并发=3，非试点坐席（未使用助手）系统并发=2。以下为7月28日单日每2分钟采样的负荷对比。</blockquote>
+<table>
+  <tr><th>指标</th><th>试点（并发=3）</th><th>非试点（并发=2）</th></tr>
+  <tr><td>平均活跃会话</td><td><strong>2.1</strong></td><td>1.3</td></tr>
+  <tr><td>平均未关闭会话</td><td><strong>3.2</strong></td><td>1.9</td></tr>
+  <tr><td>活跃达上限比例</td><td>49.2%</td><td>46.1%</td></tr>
+  <tr><td>未关闭超上限比例</td><td>53.6%</td><td>38.4%</td></tr>
+</table>
+<div class="highlight">试点坐席在更高并发设置下，仍维持了与非试点相近的"达上限"比例（49% vs 46%），说明助手有效吸收了第三路并发带来的工作量。同时需关注，试点坐席未关闭会话超上限的比例（53.6%）明显更高，高峰时段（9-12点）压力尤为突出——12点时段试点坐席活跃会话达上限比例达 94.7%。</div>
+
+<h3>3.3 用户满意度：差距稳定，近三周趋势向好</h3>
+<table>
+  <tr><th>阶段</th><th>试点满意度</th><th>部门满意度</th><th>差距</th></tr>
+  <tr><td>第一阶段（并发=2，WK14-21）</td><td>77.0%</td><td>85.9%</td><td>-8.9%</td></tr>
+  <tr><td>第二阶段（并发=3，WK22-29）</td><td>75.2%</td><td>83.5%</td><td>-8.3%</td></tr>
+</table>
+<p>两个观察：</p>
+<ol>
+  <li>并发从2开到3后，满意度差距<strong>没有扩大</strong>（8.9% → 8.3%），助手回复质量未因并发增加而下降</li>
+  <li>近三周试点满意度<strong>持续回升</strong>（WK27: 76.4% → WK28: 77.2% → WK29: 78.7%），与部门差距缩窄至 7.4%</li>
+</ol>
+
+<hr>
+
+<h2>四、服务质量分析</h2>
+
+<h3>4.1 整体数据</h3>
+<p>7月1日—21日，试点坐席共质检 <strong>1,314 通</strong>对话，不通过 <strong>158 通</strong>，通过率 <strong>88.0%</strong>。</p>
+<table>
+  <tr><th>周</th><th>质检量</th><th>不通过</th><th>通过率</th></tr>
+  <tr><td>WK27 (7.1-7.5)</td><td>420</td><td>47</td><td>88.8%</td></tr>
+  <tr><td>WK28 (7.6-7.12)</td><td>449</td><td>38</td><td>91.5%</td></tr>
+  <tr><td>WK29 (7.13-7.19)</td><td>373</td><td>67</td><td><strong>82.0%</strong> ⚠</td></tr>
+  <tr><td>WK30 (7.20-7.21)</td><td>72</td><td>6</td><td>91.7%</td></tr>
+</table>
+<div class="warn"><strong>WK29通过率骤降</strong>：高中风险场景未支持导致不通过集中爆发（31通），属于能力尚未覆盖，并非助手质量恶化。该能力已于7月23日上线。</div>
+
+<h3>4.2 不通过对话归因</h3>
+<p>对全部158通质检不通过对话进行逐条分析，按原因归属分为以下三类。</p>
+<img src="归因分析图.png" alt="归因分析图">
+<p class="img-caption">158通不通过对话归因分析</p>
+
+<table>
+  <tr><th>大类</th><th>数量</th><th>占比</th><th>含义</th></tr>
+  <tr><td><strong>🔴 BUG（系统缺陷）</strong></td><td>19</td><td>12.0%</td><td>助手确有缺陷，由技术团队修复</td></tr>
+  <tr><td><strong>🟡 非BUG（能力边界）</strong></td><td>114</td><td>72.2%</td><td>助手正常运转，但因能力覆盖不全或设计限制导致不通过</td></tr>
+  <tr><td><strong>⚪ 与助手无关</strong></td><td>25</td><td>15.8%</td><td>人工操作问题（工单勾选错误、业务流程错误等）</td></tr>
+</table>
+
+<h4>🔴 系统缺陷：BUG（19通，12.0%）</h4>
+<table>
+  <tr><th>问题类型</th><th>数量</th><th>说明</th></tr>
+  <tr><td>多笔订单重复探寻/流程混乱</td><td>10</td><td>既定设计不以前置节点作词槽填充</td></tr>
+  <tr><td>回复超时/未触发业务分析</td><td>4</td><td>部分场景助手未启动分析</td></tr>
+  <tr><td>"投诉"关键词未触发安抚</td><td>2</td><td>用户提"投诉"时未作服务用语回复</td></tr>
+  <tr><td>其他执行缺陷</td><td>3</td><td>语言混乱、探寻不当等</td></tr>
+</table>
+
+<h4>🟡 能力边界：非BUG（114通，72.2%）</h4>
+<table>
+  <tr><th>子类</th><th>数量</th><th>说明</th><th>状态</th></tr>
+  <tr><td>高中风险场景未支持</td><td>31</td><td>用户提"自杀""跳楼"等，未触发特殊安抚</td><td><span class="tag done">✅ 7.23上线</span></td></tr>
+  <tr><td>词槽填充设计限制</td><td>28</td><td>不以前置节点填充，重复确认信息</td><td><span class="tag wip">⏳ 评估中</span></td></tr>
+  <tr><td>客服自身问题</td><td>22</td><td>答非所问、回复超时、解答错误等</td><td>—</td></tr>
+  <tr><td>安抚话术设计</td><td>13</td><td>随机选择安抚语，与质检要求冲突</td><td><span class="tag wip">⏳ 待优化</span></td></tr>
+  <tr><td>重复进线场景</td><td>10</td><td>多次进线复杂场景，助手暂不支持</td><td><span class="tag wip">⏳ 评估中</span></td></tr>
+  <tr><td>质检规则需适配</td><td>3</td><td>助手已覆盖的功能仍按人工SOP判定</td><td><span class="tag wip">⏳ 待对齐</span></td></tr>
+  <tr><td>其他</td><td>7</td><td>主动服务标准、客服关闭自动回复等</td><td>—</td></tr>
+</table>
+
+<h4>⚪ 与助手无关（25通，15.8%）</h4>
+<p>工单勾选错误（20通）、业务流程错误、承诺退费未操作等。</p>
+
+<h3>4.3 待关注：客服未干预的对话</h3>
+<p>158通不通过对话中，有 <strong>23 通（14.6%）</strong> 客服全程未干预。</p>
+<table>
+  <tr><th>类别</th><th>未干预数</th><th>标记为需关注</th></tr>
+  <tr><td>BUG</td><td>8</td><td>2</td></tr>
+  <tr><td>非BUG</td><td>15</td><td>10</td></tr>
+</table>
+<blockquote>助手是辅助工具，客服需在助手运行过程中关注对话，及时介入。</blockquote>
+
+<hr>
+
+<h2>五、能力边界与责任划分</h2>
+
+<h3>5.1 三方协作</h3>
+<table>
+  <tr><th>责任方</th><th>负责内容</th></tr>
+  <tr><td><strong>系统侧</strong></td><td>BUG修复、新能力开发、自动回复准入/退出管理</td></tr>
+  <tr><td><strong>客服侧</strong></td><td>对话第一责任人，关注助手回复，在需要时介入</td></tr>
+  <tr><td><strong>质检侧</strong></td><td>与系统侧对齐规则，AI辅助场景的判定标准适配</td></tr>
+</table>
+
+<h3>5.2 不同场景下的处理方式</h3>
+<table>
+  <tr><th>对话场景</th><th>助手行为</th><th>客服需做的</th></tr>
+  <tr><td>能力范围内 + 达标</td><td>自动回复</td><td>关注对话，需要时介入</td></tr>
+  <tr><td>能力范围内 + 不达标</td><td>已收回自动回复，仅建议</td><td>自行判断回复</td></tr>
+  <tr><td>能力范围外</td><td>不回复或建议</td><td>自主处理</td></tr>
+  <tr><td>助手出错（BUG）</td><td>可能错误回复</td><td>及时介入并反馈</td></tr>
+</table>
+
+<h3>5.3 几点提醒</h3>
+<ol>
+  <li>助手自动回复时，客服需关注对话内容</li>
+  <li>对助手不支持的场景（如高中风险），需客服自主处理</li>
+  <li>在助手能力范围外的场景请勿依赖助手</li>
+</ol>
+
+<hr>
+
+<h2>六、对质检规则的建议</h2>
+<p>部分质检规则为纯人工场景设计，AI辅助下需重新定义判定标准。</p>
+<table>
+  <tr><th>质检规则</th><th>当前情况</th><th>建议方向</th></tr>
+  <tr><td><strong>重复探寻</strong></td><td>助手因词槽填充设计限制，前置节点已确认的信息仍会重复询问</td><td>区分设计限制导致的合理重复与能力缺陷导致的不合理重复</td></tr>
+  <tr><td><strong>安抚"更换方式"</strong></td><td>助手随机选择安抚话术，质检要求"更换安抚方式"</td><td>助手场景下，使用不同话术即视为有效</td></tr>
+  <tr><td><strong>退费未走SOP</strong></td><td>助手已自动判定退费条件，人工无需重复SOP</td><td>助手已覆盖环节，人工不判定为未走SOP</td></tr>
+</table>
+
+<hr>
+
+<h2>七、后续行动</h2>
+
+<h3>7.1 技术侧</h3>
+<table>
+  <tr><th>优先级</th><th>行动</th><th>预期影响</th></tr>
+  <tr><td><span class="tag p0">P0</span></td><td>修复多笔订单重复探寻/流程混乱</td><td>消除10通BUG</td></tr>
+  <tr><td><span class="tag p0">P0</span></td><td>高中风险场景能力上线 <span class="tag done">✅ 已完成</span></td><td>消除31通不通过</td></tr>
+  <tr><td><span class="tag wip">P1</span></td><td>丰富安抚话术库</td><td>减少安抚相关不通过</td></tr>
+  <tr><td><span class="tag wip">P1</span></td><td>评估词槽填充优化可行性</td><td>潜在影响28通（影响量最大）</td></tr>
+  <tr><td>P2</td><td>评估重复进线场景支持</td><td>影响10通</td></tr>
+</table>
+
+<h3>7.2 协同侧</h3>
+<table>
+  <tr><th>行动</th><th>参与方</th></tr>
+  <tr><td>质检规则适配讨论</td><td>系统 + 质检 + 客服</td></tr>
+  <tr><td>自动回复准入/退出流程制度化</td><td>系统 + 管理</td></tr>
+  <tr><td>助手能力边界全员宣贯</td><td>系统 + 客服</td></tr>
+</table>
+
+<hr>
+
+<h2>八、总结</h2>
+<table>
+  <tr><th>维度</th><th>当前水平</th><th>判断</th></tr>
+  <tr><td><strong>提效</strong></td><td>试点人效 +15-41%</td><td>效果显著且持续</td></tr>
+  <tr><td><strong>质检</strong></td><td>通过率 88.0%</td><td>72%为能力边界问题，12%为系统缺陷，16%与助手无关</td></tr>
+  <tr><td><strong>满意度</strong></td><td>试点 76-79%，差距 7-9%</td><td>差距存在但未扩大，近三周持续回暖</td></tr>
+  <tr><td><strong>并发</strong></td><td>试点49%时间满载</td><td>高峰压力大，需持续监控</td></tr>
+</table>
+<blockquote><strong>坐席助手提效价值明确。服务质量提升需要三方协力：系统侧修BUG补能力、客服侧守住第一责任人底线、质检侧适配AI场景规则。</strong></blockquote>
+
+<hr>
+<p style="text-align:center; color: #94a3b8; font-size: 12px; margin-top: 32px;">报告日期：2026年7月29日</p>
+
+</div>
+</body>
+</html>
